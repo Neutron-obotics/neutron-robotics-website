@@ -12,21 +12,20 @@ export default function Contact() {
 
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault()
-    const subject = encodeURIComponent(`Neutron Robotics — message de ${name || 'un visiteur'}`)
-    const body = encodeURIComponent(`${message}\n\n— ${name} (${email})`)
+    const subject = encodeURIComponent(`Neutron Robotics : message de ${name || 'un visiteur'}`)
+    const body = encodeURIComponent(`${message}\n\n${name} (${email})`)
     window.location.href = `mailto:${CONTACT_EMAIL}?subject=${subject}&body=${body}`
   }
 
   return (
-    <div className="page" style={{ paddingTop: 140 }}>
-      <section style={{ paddingTop: 0 }}>
-        <Reveal>
-          <div className="section-head">
-            <span className="kicker">{t.contact.kicker}</span>
-            <h2>{t.contact.title}</h2>
-            <p>{t.contact.text}</p>
-          </div>
-        </Reveal>
+    <section id="contact" className="page">
+      <Reveal>
+        <div className="section-head">
+          <span className="kicker">{t.contact.kicker}</span>
+          <h2>{t.contact.title}</h2>
+          <p>{t.contact.text}</p>
+        </div>
+      </Reveal>
 
         <div className="contact-grid">
           <Reveal>
@@ -86,7 +85,6 @@ export default function Contact() {
             </div>
           </Reveal>
         </div>
-      </section>
-    </div>
+    </section>
   )
 }

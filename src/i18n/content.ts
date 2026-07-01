@@ -133,13 +133,13 @@ export const content: Record<'fr' | 'en', SiteContent> = {
       title: 'Un drone. Reprogrammable.',
       highlight: "Tous les modèles d'IA du monde.",
       subtitle:
-        "Le premier drone professionnel open-source qui fait tourner, à bord et sans internet, les meilleurs modèles d'intelligence artificielle — et change de mission en cinq minutes.",
+        "Le premier drone professionnel open-source qui fait tourner, à bord et sans internet, les meilleurs modèles d'intelligence artificielle, et change de mission en cinq minutes.",
       cta1: 'Découvrir la solution',
       cta2: "Voir la notice de montage",
       scroll: 'Défiler',
       visionTitle: 'Rendre chaque drone reprogrammable. Partout.',
       visionText:
-        "Un standard ouvert pour l'intelligence embarquée — conçu en Europe, ouvert au monde.",
+        "Un standard ouvert pour l'intelligence embarquée, conçu en Europe, ouvert au monde.",
     },
     problem: {
       kicker: '02 · Problème',
@@ -155,7 +155,7 @@ export const content: Record<'fr' | 'en', SiteContent> = {
       marketKicker: '03 · Marché',
       marketTitle: 'Un marché massif, un logiciel à la traîne.',
       marketIntro:
-        'Le marché des drones commerciaux explose, mais la valeur migre vers le logiciel — segment qui croît de 27 % par an. C’est là que nous nous positionnons.',
+        'Le marché des drones commerciaux explose, mais la valeur migre vers le logiciel, un segment qui croît de 27 % par an. C’est là que nous nous positionnons.',
       marketStats: [
         { stat: '65 Md$', label: 'Drones commerciaux', desc: "Marché mondial d'ici 2032." },
         { stat: '24 Md$', label: 'Logiciel pour drones', desc: "Marché mondial d'ici 2030." },
@@ -191,7 +191,7 @@ export const content: Record<'fr' | 'en', SiteContent> = {
       kicker: '09 · Concurrence',
       title: 'Seuls sur le quadrant qui compte.',
       text:
-        "Les leaders sont figés. Les solutions ouvertes n'embarquent pas d'IA. Programmable et capable de faire tourner les meilleurs modèles à bord : cette case est vide — nous l'occupons.",
+        "Les leaders sont figés. Les solutions ouvertes n'embarquent pas d'IA. Programmable et capable de faire tourner les meilleurs modèles à bord : cette case est vide : nous l'occupons.",
       axisNoIa: "Pas d'IA",
       axisIa: 'IA embarquée',
       axisFrozen: 'Figé',
@@ -204,7 +204,7 @@ export const content: Record<'fr' | 'en', SiteContent> = {
       title: 'Une alternative européenne, durable et accessible.',
       text: 'Notre contribution répond à trois fragilités du marché : souveraineté européenne, durabilité contre l’obsolescence, accessibilité de la R&D, ancrage industriel en France.',
       points: [
-        { num: '01', title: 'Souveraineté', desc: 'Logiciel, données et assemblage maîtrisés en France — face à une dépendance de 70 % aux drones chinois.' },
+        { num: '01', title: 'Souveraineté', desc: 'Logiciel, données et assemblage maîtrisés en France, face à une dépendance de 70 % aux drones chinois.' },
         { num: '02', title: 'Durabilité', desc: 'L’inverse du jetable : réparable pièce par pièce, open-source, mis à jour par logiciel.' },
         { num: '03', title: 'Accessibilité', desc: 'Tester un algorithme en vol passe de 200 000 € à 2 500 €. La recherche et les PME y accèdent.' },
         { num: '04', title: 'Ancrage', desc: 'Conçu et assemblé en France. Des emplois d’ingénierie hardware et IA, ici.' },
@@ -215,7 +215,7 @@ export const content: Record<'fr' | 'en', SiteContent> = {
       kicker: '11 · Business model',
       title: 'On vend le drone une fois. On vend l’intelligence chaque mois.',
       unique: { title: 'Achat unique', stat: '2 500 €', desc: 'Le kit de démarrage : drone open-source, calculateur d’IA embarqué et SDK complet.' },
-      recurring: { title: 'Revenu récurrent', stat: '49–199 €/mois', desc: 'L’abonnement au catalogue de modèles IA — un revenu qui grandit avec chaque client.' },
+      recurring: { title: 'Revenu récurrent', stat: '49–199 €/mois', desc: 'L’abonnement au catalogue de modèles IA, un revenu qui grandit avec chaque client.' },
       text: 'Modèle hybride : vente unique du drone, puis revenu récurrent mensuel sur le catalogue de modèles IA.',
     },
     gtm: {
@@ -245,13 +245,13 @@ export const content: Record<'fr' | 'en', SiteContent> = {
         {
           name: 'Romain Gasquet',
           role: 'PRÉSIDENT',
-          title: 'Ingénieur électronique — Hardware & systèmes embarqués',
+          title: 'Ingénieur électronique, hardware & systèmes embarqués',
           bio: 'Enedis · électronique industrielle · contraintes temps réel',
         },
         {
           name: 'Florian Even',
           role: 'DIRECTEUR GÉNÉRAL',
-          title: 'Ingénieur informatique — Logiciel & IA embarquée',
+          title: 'Ingénieur informatique, logiciel & IA embarquée',
           bio: 'Safran · IA déconnectée · systèmes critiques',
         },
       ],
@@ -283,16 +283,16 @@ export const content: Record<'fr' | 'en', SiteContent> = {
       notice: 'Assembly guide',
     },
     home: {
-      tag: 'Applicant — Les Victoires by Garance 2026',
+      tag: 'Applicant, Les Victoires by Garance 2026',
       title: 'One drone. Reprogrammable.',
       highlight: 'Every AI model in the world.',
       subtitle:
-        'The first open-source professional drone that runs, on board and offline, the best artificial intelligence models — and switches mission in five minutes.',
+        'The first open-source professional drone that runs, on board and offline, the best artificial intelligence models, and switches mission in five minutes.',
       cta1: 'Discover the solution',
       cta2: 'View assembly guide',
       scroll: 'Scroll',
       visionTitle: 'Make every drone reprogrammable. Everywhere.',
-      visionText: 'An open standard for embedded intelligence — designed in Europe, open to the world.',
+      visionText: 'An open standard for embedded intelligence, designed in Europe, open to the world.',
     },
     problem: {
       kicker: '02 · Problem',
@@ -308,7 +308,7 @@ export const content: Record<'fr' | 'en', SiteContent> = {
       marketKicker: '03 · Market',
       marketTitle: 'A massive market, software lagging behind.',
       marketIntro:
-        'The commercial drone market is exploding, but value is migrating to software — the segment growing 27% a year. That is where we position ourselves.',
+        'The commercial drone market is exploding, but value is migrating to software, the segment growing 27% a year. That is where we position ourselves.',
       marketStats: [
         { stat: '$65 Bn', label: 'Commercial drones', desc: 'Global market by 2032.' },
         { stat: '$24 Bn', label: 'Drone software', desc: 'Global market by 2030.' },
@@ -344,7 +344,7 @@ export const content: Record<'fr' | 'en', SiteContent> = {
       kicker: '09 · Competition',
       title: 'Alone in the quadrant that matters.',
       text:
-        'Leaders are frozen. Open solutions carry no AI. Programmable and capable of running the best models on board: this spot is empty — we occupy it.',
+        'Leaders are frozen. Open solutions carry no AI. Programmable and capable of running the best models on board: this spot is empty, and we occupy it.',
       axisNoIa: 'No AI',
       axisIa: 'Embedded AI',
       axisFrozen: 'Frozen',
@@ -357,7 +357,7 @@ export const content: Record<'fr' | 'en', SiteContent> = {
       title: 'A European, sustainable and accessible alternative.',
       text: 'Our contribution addresses three market fragilities: European sovereignty, durability against obsolescence, accessible R&D, and industrial anchoring in France.',
       points: [
-        { num: '01', title: 'Sovereignty', desc: 'Software, data and assembly controlled in France — against a 70% dependence on Chinese drones.' },
+        { num: '01', title: 'Sovereignty', desc: 'Software, data and assembly controlled in France, against a 70% dependence on Chinese drones.' },
         { num: '02', title: 'Durability', desc: 'The opposite of disposable: repairable part by part, open-source, updated by software.' },
         { num: '03', title: 'Accessibility', desc: 'Flight-testing an algorithm drops from €200,000 to €2,500. Research and SMEs can access it.' },
         { num: '04', title: 'Anchoring', desc: 'Designed and assembled in France. Hardware and AI engineering jobs, here.' },
@@ -368,7 +368,7 @@ export const content: Record<'fr' | 'en', SiteContent> = {
       kicker: '11 · Business model',
       title: 'We sell the drone once. We sell the intelligence every month.',
       unique: { title: 'One-time purchase', stat: '€2,500', desc: 'The starter kit: open-source drone, embedded AI computer and complete SDK.' },
-      recurring: { title: 'Recurring revenue', stat: '€49–199/mo', desc: 'Subscription to the AI model catalog — revenue that grows with every customer.' },
+      recurring: { title: 'Recurring revenue', stat: '€49–199/mo', desc: 'Subscription to the AI model catalog, revenue that grows with every customer.' },
       text: 'Hybrid model: one-time drone sale, then monthly recurring revenue on the AI model catalog.',
     },
     gtm: {
@@ -398,13 +398,13 @@ export const content: Record<'fr' | 'en', SiteContent> = {
         {
           name: 'Romain Gasquet',
           role: 'CHAIRMAN',
-          title: 'Electronics engineer — Hardware & embedded systems',
+          title: 'Electronics engineer, hardware & embedded systems',
           bio: 'Enedis · industrial electronics · real-time constraints',
         },
         {
           name: 'Florian Even',
           role: 'CEO',
-          title: 'Software engineer — Embedded software & AI',
+          title: 'Software engineer, embedded software & AI',
           bio: 'Safran · disconnected AI · critical systems',
         },
       ],

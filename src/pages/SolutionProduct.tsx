@@ -5,8 +5,8 @@ export default function SolutionProduct() {
   const { t } = useLang()
 
   return (
-    <div className="page" style={{ paddingTop: 140 }}>
-      <section style={{ paddingTop: 0 }}>
+    <>
+      <section id="solution" className="page">
         <Reveal>
           <div className="section-head">
             <span className="kicker">{t.solution.kicker}</span>
@@ -27,7 +27,7 @@ export default function SolutionProduct() {
         </div>
       </section>
 
-      <section>
+      <section className="page">
         <Reveal>
           <div className="section-head">
             <span className="kicker">{t.solution.productKicker}</span>
@@ -47,7 +47,7 @@ export default function SolutionProduct() {
         </div>
       </section>
 
-      <section>
+      <section className="page">
         <Reveal>
           <div className="section-head">
             <span className="kicker">{t.solution.advantagesKicker}</span>
@@ -67,7 +67,7 @@ export default function SolutionProduct() {
         </div>
       </section>
 
-      <section>
+      <section className="page">
         <Reveal>
           <div className="section-head">
             <span className="kicker">{t.impact.kicker}</span>
@@ -93,7 +93,7 @@ export default function SolutionProduct() {
         </Reveal>
       </section>
 
-      <section>
+      <section className="page">
         <Reveal>
           <div className="section-head">
             <span className="kicker">{t.business.kicker}</span>
@@ -119,7 +119,7 @@ export default function SolutionProduct() {
         </div>
       </section>
 
-      <section>
+      <section className="page">
         <Reveal>
           <div className="section-head">
             <span className="kicker">{t.gtm.kicker}</span>
@@ -139,7 +139,7 @@ export default function SolutionProduct() {
         </div>
       </section>
 
-      <section>
+      <section className="page">
         <Reveal>
           <div className="section-head">
             <span className="kicker">{t.roadmap.kicker}</span>
@@ -157,6 +157,6 @@ export default function SolutionProduct() {
           ))}
         </div>
       </section>
-    </div>
+    </>
   )
 }

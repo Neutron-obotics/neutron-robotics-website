@@ -14,7 +14,7 @@ export default function Footer() {
         </div>
         <span>{t.footer.tagline}</span>
         <span>
-          © {year} Neutron Robotics — {t.footer.rights}
+          © {year} Neutron Robotics, {t.footer.rights}
         </span>
       </div>
     </footer>

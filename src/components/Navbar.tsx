@@ -1,32 +1,52 @@
-import { useState } from 'react'
-import { NavLink } from 'react-router-dom'
+import { useEffect, useState } from 'react'
 import { useLang } from '../i18n/LangContext'
 import logo from '../assets/logo.png'
 
 export default function Navbar() {
   const { lang, setLang, t } = useLang()
   const [open, setOpen] = useState(false)
+  const [active, setActive] = useState('accueil')
 
   const links = [
-    { to: '/', label: t.nav.home, end: true },
-    { to: '/probleme-marche', label: t.nav.problem },
-    { to: '/solution-produit', label: t.nav.solution },
-    { to: '/equipe', label: t.nav.team },
-    { to: '/contact', label: t.nav.contact },
+    { to: 'accueil', label: t.nav.home },
+    { to: 'probleme-marche', label: t.nav.problem },
+    { to: 'solution', label: t.nav.solution },
+    { to: 'equipe', label: t.nav.team },
+    { to: 'contact', label: t.nav.contact },
   ]
+
+  useEffect(() => {
+    const sections = links
+      .map((l) => document.getElementById(l.to))
+      .filter((el): el is HTMLElement => el !== null)
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const visible = entries.filter((e) => e.isIntersecting)
+        if (visible.length > 0) {
+          setActive(visible[0].target.id)
+        }
+      },
+      { rootMargin: '-45% 0px -50% 0px' },
+    )
+
+    sections.forEach((el) => observer.observe(el))
+    return () => observer.disconnect()
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
 
   return (
     <header className="navbar">
-      <NavLink to="/" className="brand" onClick={() => setOpen(false)}>
+      <a href="#accueil" className="brand" onClick={() => setOpen(false)}>
         <img src={logo} alt="Neutron Robotics" />
         <span>NEUTRON ROBOTICS</span>
-      </NavLink>
+      </a>
 
       <nav className="nav-links">
         {links.map((l) => (
-          <NavLink key={l.to} to={l.to} end={l.end} className={({ isActive }) => (isActive ? 'active' : '')}>
+          <a key={l.to} href={`#${l.to}`} className={active === l.to ? 'active' : ''}>
             {l.label}
-          </NavLink>
+          </a>
         ))}
       </nav>
 
@@ -54,15 +74,14 @@ export default function Navbar() {
       {open && (
         <nav className="mobile-menu">
           {links.map((l) => (
-            <NavLink
+            <a
               key={l.to}
-              to={l.to}
-              end={l.end}
-              className={({ isActive }) => (isActive ? 'active' : '')}
+              href={`#${l.to}`}
+              className={active === l.to ? 'active' : ''}
               onClick={() => setOpen(false)}
             >
               {l.label}
-            </NavLink>
+            </a>
           ))}
         </nav>
       )}

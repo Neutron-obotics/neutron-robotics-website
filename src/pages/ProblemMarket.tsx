@@ -1,8 +1,6 @@
 import Reveal from '../components/Reveal'
 import { useLang } from '../i18n/LangContext'
 
-// DJI, Parrot, Autel EVO — closed leaders (frozen, semi-closed AI)
-// DIY ArduPilot, Paparazzi UAV — open but no embedded AI (programmable, no AI)
 const competitorPositions = [
   { left: '16%', bottom: '58%' },
   { left: '24%', bottom: '52%' },
@@ -15,8 +13,8 @@ export default function ProblemMarket() {
   const { t } = useLang()
 
   return (
-    <div className="page" style={{ paddingTop: 140 }}>
-      <section style={{ paddingTop: 0 }}>
+    <>
+      <section id="probleme-marche" className="page">
         <Reveal>
           <div className="section-head">
             <span className="kicker">{t.problem.kicker}</span>
@@ -37,7 +35,7 @@ export default function ProblemMarket() {
         </div>
       </section>
 
-      <section>
+      <section className="page">
         <Reveal>
           <div className="section-head">
             <span className="kicker">{t.problem.marketKicker}</span>
@@ -58,7 +56,7 @@ export default function ProblemMarket() {
         </div>
       </section>
 
-      <section>
+      <section className="page">
         <Reveal>
           <div className="section-head">
             <span className="kicker">{t.competition.kicker}</span>
@@ -87,6 +85,6 @@ export default function ProblemMarket() {
           </div>
         </Reveal>
       </section>
-    </div>
+    </>
   )
 }

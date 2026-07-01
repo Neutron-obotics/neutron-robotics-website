@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&family=Manrope:wght@400;500;600&display=swap');
 
 :root {
   --bg: #05060a;
@@ -26,7 +26,7 @@ body {
   margin: 0;
   background: var(--bg);
   color: var(--text);
-  font-family: 'Space Grotesk', system-ui, sans-serif;
+  font-family: 'Manrope', system-ui, sans-serif;
   overflow-x: hidden;
 }
 
@@ -41,7 +41,8 @@ a {
 }
 
 .mono {
-  font-family: 'JetBrains Mono', monospace;
+  font-family: 'Sora', sans-serif;
+  letter-spacing: 0.01em;
 }
 
 /* ---------- ambient background ---------- */
@@ -101,13 +102,14 @@ a {
 
 section {
   padding: 120px 0;
+  scroll-margin-top: 88px;
 }
 
 .kicker {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  font-family: 'JetBrains Mono', monospace;
+  font-family: 'Sora', sans-serif;
   font-size: 12px;
   letter-spacing: 0.14em;
   text-transform: uppercase;
@@ -123,6 +125,7 @@ section {
 }
 
 h1, h2, h3 {
+  font-family: 'Sora', sans-serif;
   line-height: 1.08;
   margin: 0 0 20px;
   font-weight: 600;
@@ -217,7 +220,7 @@ p {
   border: 1px solid var(--panel-border);
   border-radius: 999px;
   overflow: hidden;
-  font-family: 'JetBrains Mono', monospace;
+  font-family: 'Sora', sans-serif;
   font-size: 0.78rem;
 }
 
@@ -375,7 +378,7 @@ p {
   flex-direction: column;
   align-items: center;
   gap: 8px;
-  font-family: 'JetBrains Mono', monospace;
+  font-family: 'Sora', sans-serif;
   font-size: 11px;
   letter-spacing: 0.14em;
   text-transform: uppercase;
@@ -424,7 +427,7 @@ p {
 }
 
 .card .stat {
-  font-family: 'JetBrains Mono', monospace;
+  font-family: 'Sora', sans-serif;
   font-size: 2rem;
   font-weight: 600;
   color: var(--accent);
@@ -441,7 +444,7 @@ p {
 }
 
 .card .num {
-  font-family: 'JetBrains Mono', monospace;
+  font-family: 'Sora', sans-serif;
   color: var(--accent);
   font-size: 0.85rem;
   margin-bottom: 10px;
@@ -475,7 +478,7 @@ p {
 
 .matrix-axis {
   position: absolute;
-  font-family: 'JetBrains Mono', monospace;
+  font-family: 'Sora', sans-serif;
   font-size: 11px;
   color: var(--text-dim);
   text-transform: uppercase;
@@ -490,7 +493,7 @@ p {
 .matrix-dot {
   position: absolute;
   transform: translate(-50%, 50%);
-  font-family: 'JetBrains Mono', monospace;
+  font-family: 'Sora', sans-serif;
   font-size: 12px;
   color: var(--text-dim);
   white-space: nowrap;
@@ -553,7 +556,7 @@ p {
 }
 
 .timeline-year {
-  font-family: 'JetBrains Mono', monospace;
+  font-family: 'Sora', sans-serif;
   color: var(--accent);
   font-weight: 700;
   margin-bottom: 6px;
@@ -567,21 +570,16 @@ p {
 }
 
 .founder-avatar {
-  width: 64px;
-  height: 64px;
+  width: 84px;
+  height: 84px;
   border-radius: 50%;
-  background: linear-gradient(135deg, var(--accent), var(--accent-2));
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: 700;
-  font-size: 1.3rem;
-  color: #05060a;
+  object-fit: cover;
+  border: 2px solid var(--panel-border);
   margin-bottom: 14px;
 }
 
 .founder-role {
-  font-family: 'JetBrains Mono', monospace;
+  font-family: 'Sora', sans-serif;
   font-size: 11px;
   letter-spacing: 0.1em;
   color: var(--accent);
@@ -609,7 +607,7 @@ p {
 .field label {
   font-size: 0.82rem;
   color: var(--text-dim);
-  font-family: 'JetBrains Mono', monospace;
+  font-family: 'Sora', sans-serif;
 }
 
 .field input,
