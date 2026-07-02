@@ -1,10 +1,8 @@
 # Neutron Robotics
 
-Site vitrine de Neutron Robotics — un drone professionnel open-source et
+Site vitrine de Neutron Robotics, un drone professionnel open-source et
 reprogrammable, capable de faire tourner les meilleurs modèles d'IA à bord,
 sans internet.
-
-Candidature aux Victoires by Garance 2026.
 
 ## Stack
 

@@ -129,7 +129,7 @@ export const content: Record<'fr' | 'en', SiteContent> = {
       notice: 'Notice de montage',
     },
     home: {
-      tag: "Candidature Les Victoires by Garance 2026",
+      tag: "Robotique open-source, IA embarquée",
       title: 'Un drone. Reprogrammable.',
       highlight: "Tous les modèles d'IA du monde.",
       subtitle:
@@ -283,7 +283,7 @@ export const content: Record<'fr' | 'en', SiteContent> = {
       notice: 'Assembly guide',
     },
     home: {
-      tag: 'Applicant, Les Victoires by Garance 2026',
+      tag: 'Open-source robotics, embedded AI',
       title: 'One drone. Reprogrammable.',
       highlight: 'Every AI model in the world.',
       subtitle:
