@@ -9,8 +9,7 @@ export default function Navbar() {
 
   const links = [
     { to: 'accueil', label: t.nav.home },
-    { to: 'probleme-marche', label: t.nav.problem },
-    { to: 'solution', label: t.nav.solution },
+    { to: 'produit', label: t.nav.product },
     { to: 'equipe', label: t.nav.team },
     { to: 'contact', label: t.nav.contact },
   ]

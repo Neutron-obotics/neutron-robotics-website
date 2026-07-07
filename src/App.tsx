@@ -2,8 +2,7 @@ import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import AmbientBackground from './components/AmbientBackground'
 import Home from './pages/Home'
-import ProblemMarket from './pages/ProblemMarket'
-import SolutionProduct from './pages/SolutionProduct'
+import Product from './pages/Product'
 import Team from './pages/Team'
 import Contact from './pages/Contact'
 
@@ -14,8 +13,7 @@ export default function App() {
       <Navbar />
       <main>
         <Home />
-        <ProblemMarket />
-        <SolutionProduct />
+        <Product />
         <Team />
         <Contact />
       </main>

@@ -71,7 +71,7 @@ export default function Contact() {
                 className="btn btn-ghost"
                 style={{ marginTop: 16 }}
               >
-                {t.contact.noticeCta}
+                {t.contact.noticeCta} ↗
               </a>
 
               <div style={{ marginTop: 32 }}>
