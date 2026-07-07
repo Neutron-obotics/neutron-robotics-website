@@ -55,9 +55,9 @@ export interface SiteContent {
     title: string
     intro: string
     drone: { title: string; amount: string; desc: string }
-    models: { title: string; amount: string; desc: string }
   }
   trust: {
+    kicker: string
     title: string
     badges: { title: string; desc: string }[]
   }
@@ -136,11 +136,15 @@ export const content: Record<'fr' | 'en', SiteContent> = {
     price: {
       kicker: 'Prix',
       title: 'Un prix simple et transparent.',
-      intro: 'Un seul achat pour le drone. Un catalogue de missions IA en option, à volonté.',
-      drone: { title: 'Le drone', amount: '2 500 €', desc: 'Kit complet : drone open-source, calculateur d’IA embarqué et SDK pour créer vos propres missions.' },
-      models: { title: 'Missions IA supplémentaires', amount: '49 à 199 €/mois', desc: 'Optionnel. Accès à un catalogue grandissant de missions prêtes à l’emploi.' },
+      intro: 'Un seul achat, sans abonnement caché.',
+      drone: {
+        title: 'Le drone',
+        amount: '2 500 €',
+        desc: 'Kit complet : drone open-source, calculateur d’IA embarqué, et l’accès à la plateforme pour charger des missions prêtes à l’emploi ou créer vos propres modèles.',
+      },
     },
     trust: {
+      kicker: 'Fiabilité',
       title: 'Conçu pour durer, pas pour être jeté.',
       badges: [
         { title: 'Conçu et assemblé en France', desc: 'De la conception à l’assemblage, tout se passe ici.' },
@@ -234,11 +238,15 @@ export const content: Record<'fr' | 'en', SiteContent> = {
     price: {
       kicker: 'Price',
       title: 'Simple, transparent pricing.',
-      intro: 'One purchase for the drone. An optional catalog of AI missions, on demand.',
-      drone: { title: 'The drone', amount: '€2,500', desc: 'Complete kit: open-source drone, embedded AI computer, and SDK to build your own missions.' },
-      models: { title: 'Additional AI missions', amount: '€49 to €199/mo', desc: 'Optional. Access to a growing catalog of ready-to-use missions.' },
+      intro: 'One purchase, no hidden subscription.',
+      drone: {
+        title: 'The drone',
+        amount: '€2,500',
+        desc: 'Complete kit: open-source drone, embedded AI computer, and access to the platform to load ready-to-use missions or build your own models.',
+      },
     },
     trust: {
+      kicker: 'Reliability',
       title: 'Built to last, not to be thrown away.',
       badges: [
         { title: 'Designed and assembled in France', desc: 'From design to assembly, it all happens here.' },

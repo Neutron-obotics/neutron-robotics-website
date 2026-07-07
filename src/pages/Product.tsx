@@ -75,27 +75,21 @@ export default function Product() {
             <p>{t.price.intro}</p>
           </div>
         </Reveal>
-        <div className="grid grid-2">
-          <Reveal>
-            <div className="card">
-              <div className="label">{t.price.drone.title}</div>
-              <div className="stat">{t.price.drone.amount}</div>
-              <p>{t.price.drone.desc}</p>
-            </div>
-          </Reveal>
-          <Reveal delay={0.08}>
-            <div className="card">
-              <div className="label">{t.price.models.title}</div>
-              <div className="stat">{t.price.models.amount}</div>
-              <p>{t.price.models.desc}</p>
-            </div>
-          </Reveal>
-        </div>
+        <Reveal>
+          <div className="card price-card">
+            <div className="label">{t.price.drone.title}</div>
+            <div className="stat">{t.price.drone.amount}</div>
+            <p>{t.price.drone.desc}</p>
+          </div>
+        </Reveal>
       </section>
 
       <section className="page">
         <Reveal>
           <div className="section-head" style={{ margin: '0 auto', textAlign: 'center' }}>
+            <span className="kicker" style={{ justifyContent: 'center' }}>
+              {t.trust.kicker}
+            </span>
             <h2>{t.trust.title}</h2>
           </div>
         </Reveal>

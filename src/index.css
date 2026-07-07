@@ -97,31 +97,25 @@ a {
   z-index: 1;
   max-width: 1180px;
   margin: 0 auto;
-  padding: 0 28px;
+  padding-left: 28px;
+  padding-right: 28px;
 }
 
 section {
-  padding: 170px 0;
+  padding-top: 170px;
+  padding-bottom: 170px;
   scroll-margin-top: 88px;
 }
 
 .kicker {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
   font-family: 'Sora', sans-serif;
   font-size: 12px;
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--accent);
   margin-bottom: 18px;
-}
-
-.kicker::before {
-  content: '';
-  width: 22px;
-  height: 1px;
-  background: var(--accent);
 }
 
 h1, h2, h3 {
@@ -449,6 +443,10 @@ p {
   font-size: 0.85rem;
   margin-bottom: 10px;
   display: block;
+}
+
+.price-card {
+  max-width: 480px;
 }
 
 .section-head {
