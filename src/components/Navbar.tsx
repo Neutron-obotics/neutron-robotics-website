@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { useLang } from '../i18n/LangContext'
-import logo from '../assets/logo.png'
+import logo from '../assets/logo-long.png'
 
 export default function Navbar() {
   const { lang, setLang, t } = useLang()
@@ -11,6 +11,7 @@ export default function Navbar() {
     { to: 'accueil', label: t.nav.home },
     { to: 'produit', label: t.nav.product },
     { to: 'equipe', label: t.nav.team },
+    { to: 'faq', label: t.nav.faq },
     { to: 'contact', label: t.nav.contact },
   ]
 
@@ -36,11 +37,6 @@ export default function Navbar() {
 
   return (
     <header className="navbar">
-      <a href="#accueil" className="brand" onClick={() => setOpen(false)}>
-        <img src={logo} alt="Neutron Robotics" />
-        <span>NEUTRON ROBOTICS</span>
-      </a>
-
       <nav className="nav-links">
         {links.map((l) => (
           <a key={l.to} href={`#${l.to}`} className={active === l.to ? 'active' : ''}>
@@ -69,6 +65,10 @@ export default function Navbar() {
           <span />
         </button>
       </div>
+
+      <a href="#accueil" className="brand brand-long" onClick={() => setOpen(false)}>
+        <img src={logo} alt="Neutron Robotics" />
+      </a>
 
       {open && (
         <nav className="mobile-menu">

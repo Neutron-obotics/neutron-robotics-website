@@ -29,17 +29,12 @@ export default function Home() {
           </Reveal>
           <Reveal delay={0.24}>
             <div className="hero-actions">
-              <a href="#produit" className="btn btn-primary">
+              <a href="#contact" className="btn btn-primary">
                 {t.home.cta1}
               </a>
-              <a
-                href="https://guillaumeg22350.github.io/notice-drone/"
-                target="_blank"
-                rel="noreferrer"
-                className="btn btn-ghost"
-              >
-                {t.home.cta2}
-              </a>
+              <span className="mono" style={{ fontSize: '0.8rem', color: 'var(--text-dim)' }}>
+                {t.home.badge}
+              </span>
             </div>
           </Reveal>
         </div>

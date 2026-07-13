@@ -173,6 +173,12 @@ p {
   filter: drop-shadow(0 0 10px var(--accent));
 }
 
+.brand-long img {
+  width: auto;
+  height: 30px;
+  filter: none;
+}
+
 .nav-links {
   display: flex;
   align-items: center;
@@ -445,10 +451,6 @@ p {
   display: block;
 }
 
-.price-card {
-  max-width: 480px;
-}
-
 .section-head {
   max-width: 720px;
   margin-bottom: 72px;
@@ -511,53 +513,40 @@ p {
   text-transform: uppercase;
 }
 
-/* ---------- contact ---------- */
-.contact-grid {
-  display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
-  gap: 40px;
+/* ---------- faq ---------- */
+.faq-list {
+  max-width: 760px;
 }
 
-@media (max-width: 900px) {
-  .contact-grid { grid-template-columns: 1fr; }
+.faq-item {
+  border-top: 1px solid var(--panel-border);
 }
 
-.field {
+.faq-question {
+  width: 100%;
   display: flex;
-  flex-direction: column;
-  gap: 8px;
-  margin-bottom: 18px;
-}
-
-.field label {
-  font-size: 0.82rem;
-  color: var(--text-dim);
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 24px 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
   font-family: 'Sora', sans-serif;
-}
-
-.field input,
-.field textarea {
-  background: var(--panel);
-  border: 1px solid var(--panel-border);
-  border-radius: 8px;
-  padding: 12px 14px;
+  font-size: 1.05rem;
+  font-weight: 600;
   color: var(--text);
-  font-family: inherit;
-  font-size: 0.95rem;
-  resize: vertical;
 }
 
-.field input:focus,
-.field textarea:focus {
-  outline: none;
-  border-color: var(--accent);
+.faq-icon {
+  flex: none;
+  font-size: 1.3rem;
+  color: var(--accent);
 }
 
-.notice-card {
-  padding: 32px;
-  border-radius: var(--radius);
-  border: 1px solid var(--panel-border);
-  background: linear-gradient(160deg, rgba(255, 33, 88, 0.1), transparent);
+.faq-answer {
+  padding: 0 0 24px;
 }
 
 /* ---------- footer ---------- */

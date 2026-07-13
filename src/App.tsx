@@ -4,6 +4,7 @@ import AmbientBackground from './components/AmbientBackground'
 import Home from './pages/Home'
 import Product from './pages/Product'
 import Team from './pages/Team'
+import Faq from './pages/Faq'
 import Contact from './pages/Contact'
 
 export default function App() {
@@ -15,6 +16,7 @@ export default function App() {
         <Home />
         <Product />
         <Team />
+        <Faq />
         <Contact />
       </main>
       <Footer />

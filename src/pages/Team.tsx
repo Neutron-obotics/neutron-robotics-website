@@ -17,7 +17,6 @@ export default function Team() {
         <div className="section-head">
           <span className="kicker">{t.team.kicker}</span>
           <h2>{t.team.title}</h2>
-          <p>{t.team.intro}</p>
         </div>
       </Reveal>
       <div className="grid grid-2">

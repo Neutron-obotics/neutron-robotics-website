@@ -2,89 +2,69 @@ import { useState, type FormEvent } from 'react'
 import Reveal from '../components/Reveal'
 import { useLang } from '../i18n/LangContext'
 
-const CONTACT_EMAIL = 'florian.even@neutron-robotics.fr'
+const CONTACT_EMAIL = 'contact@neutron-robotics.fr'
 
 export default function Contact() {
   const { t } = useLang()
-  const [name, setName] = useState('')
   const [email, setEmail] = useState('')
-  const [message, setMessage] = useState('')
+  const [submitted, setSubmitted] = useState(false)
 
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault()
-    const subject = encodeURIComponent(`Neutron Robotics : message de ${name || 'un visiteur'}`)
-    const body = encodeURIComponent(`${message}\n\n${name} (${email})`)
-    window.location.href = `mailto:${CONTACT_EMAIL}?subject=${subject}&body=${body}`
+    if (email) setSubmitted(true)
   }
 
   return (
-    <section id="contact" className="page">
+    <section id="contact" className="page" style={{ textAlign: 'center' }}>
       <Reveal>
-        <div className="section-head">
-          <span className="kicker">{t.contact.kicker}</span>
+        <div className="section-head" style={{ margin: '0 auto 40px', textAlign: 'center' }}>
           <h2>{t.contact.title}</h2>
           <p>{t.contact.text}</p>
         </div>
       </Reveal>
 
-        <div className="contact-grid">
-          <Reveal>
-            <form onSubmit={handleSubmit}>
-              <div className="field">
-                <label htmlFor="name">{t.contact.formName}</label>
-                <input id="name" value={name} onChange={(e) => setName(e.target.value)} required />
-              </div>
-              <div className="field">
-                <label htmlFor="email">{t.contact.formEmail}</label>
-                <input
-                  id="email"
-                  type="email"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  required
-                />
-              </div>
-              <div className="field">
-                <label htmlFor="message">{t.contact.formMessage}</label>
-                <textarea
-                  id="message"
-                  rows={5}
-                  value={message}
-                  onChange={(e) => setMessage(e.target.value)}
-                  required
-                />
-              </div>
-              <button type="submit" className="btn btn-primary">
-                {t.contact.formSend}
-              </button>
-            </form>
-          </Reveal>
+      <Reveal delay={0.08}>
+        {submitted ? (
+          <div className="card" style={{ maxWidth: 480, margin: '0 auto' }}>
+            <p style={{ margin: 0, color: 'var(--text)' }}>{t.contact.thanks}</p>
+          </div>
+        ) : (
+          <form
+            onSubmit={handleSubmit}
+            style={{ display: 'flex', gap: 10, flexWrap: 'wrap', justifyContent: 'center' }}
+          >
+            <input
+              type="email"
+              required
+              placeholder={t.contact.emailPlaceholder}
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              style={{
+                flex: '1',
+                minWidth: 240,
+                maxWidth: 340,
+                background: 'var(--panel)',
+                border: '1px solid var(--panel-border)',
+                borderRadius: 8,
+                padding: '13px 16px',
+                color: 'var(--text)',
+                fontFamily: 'inherit',
+                fontSize: '0.95rem',
+              }}
+            />
+            <button type="submit" className="btn btn-primary">
+              {t.contact.submit}
+            </button>
+          </form>
+        )}
+      </Reveal>
 
-          <Reveal delay={0.1}>
-            <div className="notice-card">
-              <h3>{t.contact.noticeTitle}</h3>
-              <p>{t.contact.noticeText}</p>
-              <a
-                href="https://guillaumeg22350.github.io/notice-drone/"
-                target="_blank"
-                rel="noreferrer"
-                className="btn btn-ghost"
-                style={{ marginTop: 16 }}
-              >
-                {t.contact.noticeCta} ↗
-              </a>
-
-              <div style={{ marginTop: 32 }}>
-                <span className="founder-role">Email</span>
-                <p className="mono" style={{ marginTop: 6 }}>
-                  romain.gasquet@neutron-robotics.fr
-                  <br />
-                  florian.even@neutron-robotics.fr
-                </p>
-              </div>
-            </div>
-          </Reveal>
-        </div>
+      <p className="mono" style={{ marginTop: 26, fontSize: '0.85rem' }}>
+        {t.contact.orEmail}{' '}
+        <a href={`mailto:${CONTACT_EMAIL}`} style={{ color: 'var(--accent)' }}>
+          {CONTACT_EMAIL}
+        </a>
+      </p>
     </section>
   )
 }
