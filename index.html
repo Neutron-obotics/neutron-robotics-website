@@ -2,13 +2,111 @@
 <html lang="fr">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/png" href="/logo.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Neutron Robotics — Un drone professionnel open-source et reprogrammable, capable de faire tourner les meilleurs modèles d'IA à bord, sans internet." />
-    <meta property="og:title" content="Neutron Robotics" />
-    <meta property="og:description" content="Un drone. Reprogrammable. Tous les modèles d'IA du monde." />
-    <meta property="og:image" content="https://www.neutron-robotics.fr/logo.png" />
-    <title>Neutron Robotics — Un drone, tous les modèles d'IA du monde</title>
+    <link rel="icon" type="image/png" href="/logo.png" />
+    <link rel="apple-touch-icon" href="/logo.png" />
+    <link rel="canonical" href="https://www.neutron-robotics.fr/" />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#202cac" />
+
+    <title>Neutron Robotics — Drone professionnel open-source, IA embarquée</title>
+    <meta name="description" content="Neutron Robotics — Le premier drone professionnel open-source et reprogrammable, capable de faire tourner les meilleurs modèles d'IA à bord, sans internet. Conçu et assemblé en France." />
+    <meta name="author" content="Neutron Robotics" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Neutron Robotics" />
+    <meta property="og:url" content="https://www.neutron-robotics.fr/" />
+    <meta property="og:title" content="Neutron Robotics — Drone professionnel open-source, IA embarquée" />
+    <meta property="og:description" content="Un drone. Reprogrammable. Tous les modèles d'IA du monde. Conçu et assemblé en France." />
+    <meta property="og:image" content="https://www.neutron-robotics.fr/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:locale" content="fr_FR" />
+    <meta property="og:locale:alternate" content="en_US" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Neutron Robotics — Drone professionnel open-source, IA embarquée" />
+    <meta name="twitter:description" content="Un drone. Reprogrammable. Tous les modèles d'IA du monde. Conçu et assemblé en France." />
+    <meta name="twitter:image" content="https://www.neutron-robotics.fr/og-image.png" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;600;700;900&family=Nunito:wght@400;500;600;700&display=swap"
+    />
+
+    <!-- Données structurées -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://www.neutron-robotics.fr/#organization",
+          "name": "Neutron Robotics",
+          "url": "https://www.neutron-robotics.fr/",
+          "logo": "https://www.neutron-robotics.fr/og-image.png",
+          "email": "contact@neutron-robotics.fr",
+          "description": "Drone professionnel open-source et reprogrammable, IA embarquée sans connexion. Conçu et assemblé en France.",
+          "foundingLocation": { "@type": "Place", "address": { "@type": "PostalAddress", "addressCountry": "FR" } },
+          "founder": [
+            { "@type": "Person", "name": "Romain Gasquet", "jobTitle": "Président" },
+            { "@type": "Person", "name": "Florian Even", "jobTitle": "Directeur général" }
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://www.neutron-robotics.fr/#website",
+          "url": "https://www.neutron-robotics.fr/",
+          "name": "Neutron Robotics",
+          "publisher": { "@id": "https://www.neutron-robotics.fr/#organization" },
+          "inLanguage": ["fr", "en"]
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://www.neutron-robotics.fr/#faq",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Concrètement, comment fonctionne le drone ?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Le drone embarque un calculateur d'IA (modules ouverts type NVIDIA Jetson ou Hailo) et un SDK ouvert. Vous chargez un programme depuis le catalogue — ou le vôtre — en quelques clics, sans reflasher le matériel. Le changement de mission prend cinq minutes."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Ça marche sans connexion internet ?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Oui. Les modèles d'IA tournent entièrement à bord, sans dépendre d'un réseau ou d'un cloud. Les données restent sur l'appareil : idéal pour les zones isolées ou les usages sensibles."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Pourquoi pas un drone du commerce classique ?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Les drones professionnels actuels sont figés : changer leur mission prend six mois et jusqu'à 80 000 €, et la majorité viennent de Chine. Neutron Robotics est ouvert, réparable et reprogrammable en quelques minutes, avec un assemblage souverain en France."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Par où commencer ?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Rejoignez la liste d'attente sur le site. Les premiers kits sont livrés aux laboratoires partenaires dès le premier trimestre 2027."
+              }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
   </head>
   <body>
     <div id="root"></div>

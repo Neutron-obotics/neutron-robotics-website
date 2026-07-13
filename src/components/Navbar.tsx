@@ -6,6 +6,14 @@ export default function Navbar() {
   const { lang, setLang, t } = useLang()
   const [open, setOpen] = useState(false)
   const [active, setActive] = useState('accueil')
+  const [scrolled, setScrolled] = useState(false)
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 8)
+    onScroll()
+    window.addEventListener('scroll', onScroll, { passive: true })
+    return () => window.removeEventListener('scroll', onScroll)
+  }, [])
 
   const links = [
     { to: 'accueil', label: t.nav.home },
@@ -36,8 +44,8 @@ export default function Navbar() {
   }, [])
 
   return (
-    <header className="navbar">
-      <nav className="nav-links">
+    <header className={scrolled ? 'navbar scrolled' : 'navbar'}>
+      <nav className="nav-links" aria-label="Navigation principale">
         {links.map((l) => (
           <a
             key={l.to}
@@ -52,16 +60,24 @@ export default function Navbar() {
       </nav>
 
       <div className="nav-right">
-        <div className="lang-switch">
-          <button className={lang === 'fr' ? 'active' : ''} onClick={() => setLang('fr')}>
+        <div className="lang-switch" role="group" aria-label="Langue / Language">
+          <button
+            className={lang === 'fr' ? 'active' : ''}
+            onClick={() => setLang('fr')}
+            aria-pressed={lang === 'fr'}
+          >
             FR
           </button>
-          <button className={lang === 'en' ? 'active' : ''} onClick={() => setLang('en')}>
+          <button
+            className={lang === 'en' ? 'active' : ''}
+            onClick={() => setLang('en')}
+            aria-pressed={lang === 'en'}
+          >
             EN
           </button>
         </div>
         <button
-          className="mobile-toggle"
+          className={open ? 'mobile-toggle open' : 'mobile-toggle'}
           aria-label="Menu"
           aria-expanded={open}
           onClick={() => setOpen((v) => !v)}
@@ -77,7 +93,7 @@ export default function Navbar() {
       </a>
 
       {open && (
-        <nav className="mobile-menu">
+        <nav className="mobile-menu" aria-label="Navigation mobile">
           {links.map((l) => (
             <a
               key={l.to}

@@ -24,6 +24,10 @@ export interface FaqItem {
 }
 
 export interface SiteContent {
+  seo: {
+    title: string
+    description: string
+  }
   nav: {
     home: string
     product: string
@@ -78,6 +82,11 @@ export interface SiteContent {
 
 export const content: Record<'fr' | 'en', SiteContent> = {
   fr: {
+    seo: {
+      title: "Neutron Robotics — Drone professionnel open-source, IA embarquée",
+      description:
+        "Le premier drone professionnel open-source et reprogrammable, capable de faire tourner les meilleurs modèles d'IA à bord, sans internet. Conçu et assemblé en France.",
+    },
     nav: {
       home: 'Accueil',
       product: 'Le drone',
@@ -185,6 +194,11 @@ export const content: Record<'fr' | 'en', SiteContent> = {
     },
   },
   en: {
+    seo: {
+      title: 'Neutron Robotics — Open-source professional drone, embedded AI',
+      description:
+        'The first open-source, reprogrammable professional drone that runs the best AI models on board, without internet. Designed and assembled in France.',
+    },
     nav: {
       home: 'Home',
       product: 'The drone',

@@ -1,4 +1,4 @@
-import { createContext, useContext, useMemo, useState, type ReactNode } from 'react'
+import { createContext, useContext, useEffect, useMemo, useState, type ReactNode } from 'react'
 import { content, type SiteContent } from './content'
 
 type Lang = 'fr' | 'en'
@@ -24,6 +24,13 @@ export function LangProvider({ children }: { children: ReactNode }) {
     setLangState(next)
     localStorage.setItem('nr-lang', next)
   }
+
+  useEffect(() => {
+    const { seo } = content[lang]
+    document.documentElement.lang = lang
+    document.title = seo.title
+    document.querySelector('meta[name="description"]')?.setAttribute('content', seo.description)
+  }, [lang])
 
   const value = useMemo<LangContextValue>(
     () => ({ lang, setLang, t: content[lang] }),
