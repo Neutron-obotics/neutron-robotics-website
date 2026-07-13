@@ -19,17 +19,19 @@ export default function Team() {
           <h2>{t.team.title}</h2>
         </div>
       </Reveal>
-      <div className="grid grid-2">
+      <div className="grid grid-2 founders-grid">
         {t.team.founders.map((f, i) => (
           <Reveal key={f.name} delay={i * 0.1}>
-            <div className="card founder-card">
+            <div className="founder-row">
               <img className="founder-avatar" src={photos[f.name]} alt={f.name} />
-              <span className="founder-role">{f.role}</span>
-              <h3>{f.name}</h3>
-              <p>{f.title}</p>
-              <p className="mono" style={{ fontSize: '0.82rem' }}>
-                {f.bio}
-              </p>
+              <div>
+                <h3>{f.name}</h3>
+                <span className="founder-role">{f.role}</span>
+                <p>{f.title}</p>
+                <p className="mono" style={{ fontSize: '0.85rem' }}>
+                  {f.bio}
+                </p>
+              </div>
             </div>
           </Reveal>
         ))}

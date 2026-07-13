@@ -39,7 +39,13 @@ export default function Navbar() {
     <header className="navbar">
       <nav className="nav-links">
         {links.map((l) => (
-          <a key={l.to} href={`#${l.to}`} className={active === l.to ? 'active' : ''}>
+          <a
+            key={l.to}
+            href={`#${l.to}`}
+            className={[l.to === 'contact' ? 'nav-cta' : '', active === l.to ? 'active' : '']
+              .filter(Boolean)
+              .join(' ')}
+          >
             {l.label}
           </a>
         ))}
@@ -76,7 +82,9 @@ export default function Navbar() {
             <a
               key={l.to}
               href={`#${l.to}`}
-              className={active === l.to ? 'active' : ''}
+              className={[l.to === 'contact' ? 'nav-cta' : '', active === l.to ? 'active' : '']
+                .filter(Boolean)
+                .join(' ')}
               onClick={() => setOpen(false)}
             >
               {l.label}

@@ -15,9 +15,9 @@ export default function Contact() {
   }
 
   return (
-    <section id="contact" className="page" style={{ textAlign: 'center' }}>
+    <section id="contact" className="page section-border contact-section" style={{ textAlign: 'center' }}>
       <Reveal>
-        <div className="section-head" style={{ margin: '0 auto 40px', textAlign: 'center' }}>
+        <div className="section-head">
           <h2>{t.contact.title}</h2>
           <p>{t.contact.text}</p>
         </div>
@@ -25,32 +25,15 @@ export default function Contact() {
 
       <Reveal delay={0.08}>
         {submitted ? (
-          <div className="card" style={{ maxWidth: 480, margin: '0 auto' }}>
-            <p style={{ margin: 0, color: 'var(--text)' }}>{t.contact.thanks}</p>
-          </div>
+          <div className="waitlist-thanks">{t.contact.thanks}</div>
         ) : (
-          <form
-            onSubmit={handleSubmit}
-            style={{ display: 'flex', gap: 10, flexWrap: 'wrap', justifyContent: 'center' }}
-          >
+          <form onSubmit={handleSubmit} className="waitlist-form">
             <input
               type="email"
               required
               placeholder={t.contact.emailPlaceholder}
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              style={{
-                flex: '1',
-                minWidth: 240,
-                maxWidth: 340,
-                background: 'var(--panel)',
-                border: '1px solid var(--panel-border)',
-                borderRadius: 8,
-                padding: '13px 16px',
-                color: 'var(--text)',
-                fontFamily: 'inherit',
-                fontSize: '0.95rem',
-              }}
             />
             <button type="submit" className="btn btn-primary">
               {t.contact.submit}
@@ -59,11 +42,9 @@ export default function Contact() {
         )}
       </Reveal>
 
-      <p className="mono" style={{ marginTop: 26, fontSize: '0.85rem' }}>
+      <p className="mono" style={{ marginTop: 26, fontSize: '0.85rem', color: 'var(--text-faint)' }}>
         {t.contact.orEmail}{' '}
-        <a href={`mailto:${CONTACT_EMAIL}`} style={{ color: 'var(--accent)' }}>
-          {CONTACT_EMAIL}
-        </a>
+        <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>
       </p>
     </section>
   )

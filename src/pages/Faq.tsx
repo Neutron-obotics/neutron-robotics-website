@@ -7,7 +7,7 @@ export default function Faq() {
   const [open, setOpen] = useState(0)
 
   return (
-    <section id="faq" className="page">
+    <section id="faq" className="page section-border">
       <Reveal>
         <div className="section-head">
           <span className="kicker">{t.faq.kicker}</span>

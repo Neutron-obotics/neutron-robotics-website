@@ -38,7 +38,6 @@ export interface SiteContent {
     subtitle: string
     cta1: string
     badge: string
-    scroll: string
   }
   product: {
     kicker: string
@@ -94,7 +93,6 @@ export const content: Record<'fr' | 'en', SiteContent> = {
         "Le premier drone professionnel open-source qui fait tourner, à bord et sans connexion, les meilleurs modèles d'intelligence artificielle — et change de mission en cinq minutes.",
       cta1: "Rejoindre la liste d'attente",
       badge: 'Conçu & assemblé en France',
-      scroll: 'Défiler',
     },
     product: {
       kicker: "Ce qu'on construit",
@@ -202,7 +200,6 @@ export const content: Record<'fr' | 'en', SiteContent> = {
         'The first open-source professional drone that runs, on board and offline, the best artificial intelligence models — and switches mission in five minutes.',
       cta1: 'Join the waitlist',
       badge: 'Designed & assembled in France',
-      scroll: 'Scroll',
     },
     product: {
       kicker: "What we're building",
